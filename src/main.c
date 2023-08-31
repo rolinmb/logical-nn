@@ -1,6 +1,8 @@
 #include "main.h"
 
 int main() {
+  struct timeval stop, start;
+  gettimeofday(&start, NULL);
   hidden_layer hiddenLayer;
   output_layer outputLayer;
   srand(time(0));
@@ -36,5 +38,8 @@ int main() {
 	double prediction = forward_output(hidden_outputs, &outputLayer);
 	printf("Input: %d %d, Target: %lf, Predicted: %lf\n", (int)training_data[i][0], (int)training_data[i][1], target[i], prediction);
   }
+  gettimeofday(&stop, NULL);
+  unsigned int micro_scnds = (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec;
+  printf("\n[Total program execution time: %lu microseconds]\n",micro_scnds);
   return 0;
 }

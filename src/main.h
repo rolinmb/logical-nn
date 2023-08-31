@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <sys/time.h>
 
 #define INPUT_SIZE 2
 #define HIDDEN_SIZE 8
