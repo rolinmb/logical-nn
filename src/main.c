@@ -21,6 +21,7 @@ int main() {
   double training_data[][INPUT_SIZE] = {{0,0}, {0,1}, {1,0}, {1,1}};
   // double target[] = {0, 1, 1, 1}; // OR
   // double target[] = {0, 1, 1, 0}; // XOR
+  // double target[] = {1, 0, 0, 0}; // NOR
   // double target[] = {0, 0, 0, 1}; // AND
   double target[] = {1, 1, 1, 0}; // NAND
   for (int epoch = 0; epoch < EPOCHS; epoch++) {
